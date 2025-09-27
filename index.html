@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RasoiBite - Premium Tiffin Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating particles -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <div class="logo-icon">🥘</div>
+                <span>RasoiBite</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="mobile-nav-links" id="mobile-nav">
+                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
+                <li><a href="#menu" onclick="closeMobileMenu()">Menu</a></li>
+                <li><a href="#order" onclick="closeMobileMenu()">Order</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Premium <span class="highlight">Ghar Ka Khana</span> Experience</h1>
+                    <p>Indulge in the finest home-cooked meals crafted with authentic recipes, premium ingredients, and generations of culinary expertise delivered fresh to your doorstep.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Authentic Dishes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.9★</span>
+                            <span class="stat-label">Premium Rating</span>
+                        </div>
+                    </div>
+
+                    <button class="cta-button" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+                        <span>✨</span>
+                        Explore Premium Menu
+                    </button>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-dish-container">
+                        <div class="hero-main-dish thali-complete"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why RasoiBite is Premium</h2>
+                <p class="section-subtitle">Experience the difference with our commitment to quality, authenticity, and exceptional service</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Master Chefs</h3>
+                    <p>Our experienced chefs bring decades of culinary expertise, using traditional techniques and secret family recipes to create authentic flavors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Premium Ingredients</h3>
+                    <p>We source only the finest organic vegetables, premium spices, and high-quality ingredients from trusted suppliers across India.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Lightning Delivery</h3>
+                    <p>Advanced logistics ensure your meals arrive hot, fresh, and perfectly timed with our temperature-controlled delivery system.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Artisan Quality</h3>
+                    <p>Every dish is crafted with meticulous attention to detail, ensuring restaurant-quality presentation and taste in every bite.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized as the city's best tiffin service with multiple culinary awards and thousands of satisfied customer reviews.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Health Focused</h3>
+                    <p>Nutritionally balanced meals designed by dietitians, using minimal oil, fresh ingredients, and traditional cooking methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Menu Collection</h2>
+                <p class="section-subtitle">Handcrafted dishes that celebrate the rich culinary heritage of India</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-button active" onclick="showMenu('lunch')">Signature Lunch</button>
+                <button class="tab-button" onclick="showMenu('dinner')">Gourmet Dinner</button>
+                <button class="tab-button" onclick="showMenu('weekly')">Premium Plans</button>
+            </div>
+            
+            <div id="lunch-menu" class="menu-grid">
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🍛
+                        <div class="dish-badge badge-bestseller">Best Seller</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Royal Dal Chawal</h3>
+                        <p class="dish-description">Slow-cooked premium yellow dal with aromatic jeera tadka, aged basmati rice, pure ghee, handmade papad, and artisanal pickle. A comfort food masterpiece.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹145</span>
+                                <span class="original-price">₹180</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Royal Dal Chawal', 145)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🍚
+                        <div class="dish-badge badge-special">Chef Special</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Hyderabadi Biryani</h3>
+                        <p class="dish-description">Authentic Hyderabadi-style biryani with premium basmati rice, tender meat, saffron, and traditional dum cooking. Served with raita and shorba.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹220</span>
+                                <span class="original-price">₹280</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Hyderabadi Biryani', 220)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🧀
+                        <div class="dish-badge badge-popular">Most Popular</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Paneer Tikka Masala</h3>
+                        <p class="dish-description">Perfectly grilled paneer tikka in rich tomato-cashew gravy, butter naan, fragrant rice, and fresh mint chutney. Restaurant-quality perfection.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹165</span>
+                                <span class="original-price">₹200</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Paneer Tikka Masala', 165)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🫓
+                        <div class="dish-badge badge-bestseller">Signature</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Amritsari Chole Bhature</h3>
+                        <p class="dish-description">Authentic Punjabi chole with perfectly spiced chickpeas and fluffy bhature made fresh. Served with pickled onions and mint chutney.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹135</span>
+                                <span class="original-price">₹170</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Amritsari Chole Bhature', 135)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🥞
+                        <div class="dish-badge badge-special">South Special</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Mysore Masala Dosa</h3>
+                        <p class="dish-description">Crispy golden dosa with spiced potato filling, authentic sambar, coconut chutney, and tomato chutney. South Indian perfection.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹125</span>
+                                <span class="original-price">₹155</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Mysore Masala Dosa', 125)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🍽️
+                        <div class="dish-badge badge-popular">Complete Meal</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Royal Thali Experience</h3>
+                        <p class="dish-description">Complete traditional thali with dal, sabzi, rice, roti, raita, pickle, papad, and sweet. A perfect balanced meal with authentic flavors.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹185</span>
+                                <span class="original-price">₹230</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Royal Thali Experience', 185)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dinner-menu" class="menu-grid hidden">
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🍗
+                        <div class="dish-badge badge-bestseller">Dinner Special</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Butter Chicken Deluxe</h3>
+                        <p class="dish-description">Tender chicken in rich tomato-butter gravy, garlic naan, basmati rice, and fresh salad. The ultimate comfort dinner experience.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹195</span>
+                                <span class="original-price">₹240</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Butter Chicken Deluxe', 195)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🫘
+                        <div class="dish-badge badge-popular">Family Favorite</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Dal Makhani Royal</h3>
+                        <p class="dish-description">Creamy black lentils slow-cooked overnight with butter and cream, served with naan, rice, and traditional accompaniments.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹175</span>
+                                <span class="original-price">₹210</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Dal Makhani Royal', 175)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-image-container" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+                        🍛
+                        <div class="dish-badge badge-special">Premium</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3 class="dish-name">Lucknowi Biryani</h3>
+                        <p class="dish-description">Aromatic Lucknowi-style biryani with fragrant rice, tender meat, and traditional spices. A royal dining experience.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹245</span>
+                                <span class="original-price">₹300</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Lucknowi Biryani', 245)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="weekly-menu" class="menu-grid hidden">
+                <div class="dish-card">
+                    <div class="dish-content">
+                        <h3 class="dish-name">Premium 5-Day Plan</h3>
+                        <p class="dish-description">Monday to Friday gourmet lunch experience with different signature dishes each day. Perfect for professionals who demand quality.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹750</span>
+                                <span class="original-price">₹900</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Premium 5-Day Plan', 750)">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-content">
+                        <h3 class="dish-name">Royal 7-Day Experience</h3>
+                        <p class="dish-description">Complete week of lunch and dinner with premium dishes, variety, and nutrition. The ultimate family dining solution.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹2100</span>
+                                <span class="original-price">₹2520</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Royal 7-Day Experience', 2100)">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-content">
+                        <h3 class="dish-name">Platinum Monthly</h3>
+                        <p class="dish-description">30 days of premium dining with maximum variety, seasonal specials, and exclusive dishes. Best value for connoisseurs.</p>
+                        <div class="dish-footer">
+                            <div class="price-section">
+                                <span class="current-price">₹8500</span>
+                                <span class="original-price">₹10800</span>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart('Platinum Monthly', 8500)">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order">
+        <div class="container">
+            <div class="order-container">
+                <div class="order-info">
+                    <h2 style="font-size: 3rem; font-weight: 800; color: #2d3748; margin-bottom: 24px;">Ready to Experience Premium?</h2>
+                    <p style="font-size: 1.3rem; color: #718096; margin-bottom: 40px;">Join thousands of satisfied customers who trust RasoiBite for their daily dining needs. Order now and taste the difference.</p>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 20px; backdrop-filter: blur(20px);">
+                        <h3 style="color: #2d3748; margin-bottom: 24px; font-size: 1.5rem;">Quick Order Options</h3>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📞</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #2d3748;">Call & Order</h4>
+                                    <p style="margin: 0; color: #718096;">+91 7707049865 (11 AM - 09 PM)</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">💬</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #2d3748;">WhatsApp</h4>
+                                    <p style="margin: 0; color: #718096;">Instant orders & support</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">📧</div>
+                                <div>
+                                    <h4 style="margin: 0; color: #2d3748;">Email Orders</h4>
+                                    <p style="margin: 0; color: #718096;">premium@rasoibite.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="order-form" onsubmit="handleOrder(event)">
+                    <h3 style="margin-bottom: 32px; color: #2d3748; font-size: 1.8rem; font-weight: 700;">Place Your Premium Order</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" rows="3" required placeholder="Complete address with landmark"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="meal-preference">Meal Preference</label>
+                        <select id="meal-preference" name="meal-preference" required>
+                            <option value="">Select your preference</option>
+                            <option value="lunch">Premium Lunch Only</option>
+                            <option value="dinner">Gourmet Dinner Only</option>
+                            <option value="both">Both Lunch & Dinner</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subscription">Subscription Plan</label>
+                        <select id="subscription" name="subscription" required>
+                            <option value="">Choose your plan</option>
+                            <option value="daily">Daily Premium (₹125-245)</option>
+                            <option value="weekly">Weekly Plans (₹750-2100)</option>
+                            <option value="monthly">Monthly Platinum (₹8500)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" name="start-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="special-requests">Special Preferences (Optional)</label>
+                        <textarea id="special-requests" name="special-requests" rows="2" placeholder="Dietary restrictions, spice level, or special instructions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Order Premium Experience</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Premium Contact</h3>
+                    <p>📞 +91 7707049865</p>
+                    <p>📧 premium@rasoibite.com</p>
+                    <p>🕒 Daily: 11:00 AM - 09:00 PM</p>
+                    <p>📍 Serving Premium Locations</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Delivery Zones</h3>
+                    <p>Bela Road, Muzaffarpur</p>
+                    <p>Mithanpura, Muzaffarpur</p>
+                    <p>PNT, Muzaffarpur</p>
+                    <p>Zila School, Muzaffarpur</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Access</h3>
+                    <a href="#menu">Premium Menu</a>
+                    <a href="#order">Place Order</a>
+                    <a href="#">Subscription Plans</a>
+                    <a href="#">Track Your Order</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <a href="#">Facebook Premium</a>
+                    <a href="#">Instagram Stories</a>
+                    <a href="#">WhatsApp Support</a>
+                    <a href="#">YouTube Channel</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RasoiBite Premium. Crafted with ❤️ for discerning food lovers across India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
